@@ -4,7 +4,7 @@
  * then set it's value to null;
  *
  */
-
+let unicorn = null;
 
 /* Step 2
  *
@@ -12,7 +12,7 @@
  * then assign it to be the value of "Atari"
  *
  */
-
+let videogame_system = 'Atari';
 
 /* Step 3
  *
@@ -20,7 +20,7 @@
  * and assign the value of sahara_animal to "The Addax"
  *
  */
-
+let sahara_animal = 'The Addax';
 
 /* Step 4
  *
@@ -29,7 +29,7 @@
  * each planet in our solar system, in order of distance from the sun
  * Capitalize the names.
  */
-
+let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
 
 /* Step 5
  *
@@ -38,7 +38,7 @@
  * each galilean moon of Jupiter
  *
  */
-
+let galilean_moons = ['Io', 'Europa', 'Ganymede', 'Callisto'];
 
 /* Step 6 φ
  *
@@ -46,7 +46,7 @@
  * and assign the value of golden_ratio to 1.61803398874
  *
  */
-
+let golden_ratio = 1.61803398874;
 
 /* Step 7
  *
@@ -54,7 +54,7 @@
  * and assign the value of earths_water_composition to 0.71
  *
  */
-
+let earths_water_composition = 0.71;
 
 /* Step 8
  *
@@ -62,7 +62,7 @@
  * and assign the value of club_name to "Fight Club"
  *
  */
-
+let club_name = 'Fight Club';
 
 /* Step 9
  *
@@ -73,7 +73,11 @@
  *   male    => "male"
  *   unknown => undefined
  */
-
+let gender = {
+  female: 'female',
+  male: 'male',
+  unknown: undefined
+};
 
 /* Step 10
  *
@@ -87,7 +91,12 @@
  *   gender  => gender.female
  *
  */
-
+let princess_leia = {
+  name: 'Leia Organa',
+  money: 890,
+  age: 20,
+  gender: gender.female
+};
 
 /* Step 11
  *
@@ -100,7 +109,12 @@
  *   jsonformatter.curiousconcept.com => "104.28.5.70"
  *
  */
-
+let domains = {
+  'ycombinator.com': '198.41.190.47',
+  'laughingsquid.com': '162.159.247.97',
+  'slumlordhosting.com': '198.61.179.126',
+  'jsonformatter.curiousconcept.com': '104.28.5.70'
+};
 
 /* Step 12
  *
@@ -115,7 +129,14 @@
  *   Konqueror  => "konqueror.org"
  *
  */
-
+let browsers = {
+  Chromium: 'google.com',
+  Safari: 'apple.com',
+  Opera: 'opera.com',
+  Firefox: 'mozilla.org',
+  Sleipnir: 'fenrir-inc.com',
+  Konqueror: 'konqueror.org'
+};
 
 /* Step 13
  *
@@ -133,7 +154,18 @@
  *  isDouble  => true
  *
  */
-
+let rainbow = {
+  colors: {
+    red: '#F0280A',
+    orange: '#FF8800',
+    yellow: '#FFDD00',
+    green: '#51AB0C',
+    blue: '#1593ED',
+    indigo: '#5215ED',
+    violet: '#A915ED'
+  },
+  isDouble: true
+};
 
 /* Step 14
  *
@@ -148,7 +180,7 @@
  * "Bieber Linux"
  *
  */
-
+let linuxFlavors = ['Gentoo', 'Fedora', 'Debian', 'Slackware', 'Red Hat', 'Bieber Linux'];
 
 /* Step 15
  *
@@ -162,7 +194,7 @@
  * "cytosine"
  *
  */
-
+let DNA = ['nucleatides', 'guanine', 'adenine', 'thymine', 'cytosine'];
 
 /* Step 16
  *
@@ -175,7 +207,12 @@
  * Surface      => 320
  *
  */
-
+let laptopCosts = {
+  MacBook: 1500,
+  Alienware: 2500,
+  HP: 499,
+  Surface: 320
+};
 
 /* Step 17
  *
@@ -191,7 +228,7 @@
  * "Species"
  *
  */
-
+let livingOrganismClassification = ['Kingdom', 'Phylum', 'Class', 'Order', 'Family', 'Genus', 'Species'];
 
 /* Step 18
  *
@@ -205,7 +242,7 @@
  * "cvs"
  *
  */
-
+let scmList = ['git', 'svn', 'mercurial', 'bazaar', 'cvs'];
 
 /* Step 19
  *
@@ -224,7 +261,14 @@
  *                  "Golden"
  *
  */
-
+let beers = {
+  IPA: 'Ale',
+  Lager: 'Strong',
+  Heffeweisen: 'German',
+  Stout: ['Thick', 'Dark'],
+  Porter: 'Bitter',
+  Ale: ['Light', 'Golden']
+}
 
 /* Step 20
  *
@@ -234,7 +278,9 @@
  * @return {String}
  *
  */
-
+function sahara_river() {
+  return 'Nile River';
+}
 
 /* Step 21
  *
@@ -246,7 +292,9 @@
  * @return {Number}
  *
  */
-
+function addNumbers(num1, num2) {
+  return num1 + num2;
+}
 
 /* Step 22
  *
@@ -259,7 +307,9 @@
  * @return {Bool}
  *
  */
-
+function installLinux(linuxType) {
+  return linuxFlavors.includes(linuxType);
+}
 
 /* Step 23
  *
@@ -278,7 +328,16 @@
  * @return {Bool when False, String when True}
  *
  */
-
+function drink(beer) {
+  if (beers.hasOwnProperty(beer)) {
+    if (typeof beers[beer] === 'string') {
+      return `This ${beer} is ${beers[beer]}.`;
+    } else {
+      return `This ${beer} is ${beers[beer].join(` and `)}.`;
+    }
+  }
+  return false;
+}
 
 /* Step 24
  *
@@ -291,7 +350,12 @@
  * @return {String if true else return false}
  *
  */
-
+function browseURL(browser) {
+  if (browsers.hasOwnProperty(browser)) {
+    return browsers[browser];
+  }
+  return false;
+}
 
 /* Step 25
  *
@@ -302,7 +366,13 @@
  * @return {String}
  *
  */
-
+function listLivingOrgClass() {
+  let listElements = livingOrganismClassification.reduce((accum, curr) => {
+    accum += `<li>${curr}</li>`;
+    return accum;
+  }, ``);
+  return `<ul>${listElements}</ul>`;
+}
 
 /* Step 26
  *
@@ -323,7 +393,17 @@
  * @return {String}
  *
  */
+function favoritePlanet(planet) {
+  if (planets.includes(planet)) {
+    let otherPlanet;
+    do {
+      otherPlanet = planets[Math.floor(Math.random() * planets.length)];
+    } while (planets.indexOf(planet) === planets.indexOf(otherPlanet));
 
+    return `I'm from ${planet}, but I wish I could go to ${otherPlanet}`;
+  }
+  return `${planet} is not a planet!`;
+}
 
 /* Step 27
  *
@@ -347,7 +427,22 @@
  *   earnMoney
  *
  */
+class Person {
+  constructor(name, money, age, gender) {
+    this.name = name;
+    this.money = money;
+    this.age = age;
+    this.gender = gender;
+  }
 
+  spendMoney(amount) {
+    this.money -= amount;
+  }
+
+  earnMoney(amount) {
+    this.money += amount;
+  }
+}
 
 /* Step 28
  *
@@ -360,7 +455,12 @@
  * @return {String}
  *
  */
-
+function purchaseLaptop(laptop) {
+  if (laptopCosts.hasOwnProperty(laptop)) {
+    return laptopCosts[laptop].toString();
+  }
+  return -1;
+}
 
 /* Step 29
  *
@@ -373,7 +473,9 @@
  * @return {Bool}
  *
  */
-
+function canTalkAbout(club) {
+  return club_name !== club;
+}
 
 /* Step 30
  *
@@ -395,7 +497,13 @@
  *   write
  *
  */
+function Pen(color) {
+  this.color = color;
 
+  Pen.prototype.write = function (message) {
+    return `${this.color}: ${message}`;
+  }
+}
 
 /* Step 31
  *
@@ -423,7 +531,23 @@
  *   grow
  *
  */
+function Garden(plantsTotal) {
+  this.plantsTotal = plantsTotal;
+  this.isWatered = false;
 
+  Garden.prototype.water = function () {
+    this.isWatered = true;
+  }
+
+  Garden.prototype.grow = function () {
+    if (this.isWatered) {
+      this.plantsTotal++;
+      this.isWatered = false;
+    } else {
+      return false;
+    }
+  }
+}
 
 /* Step 32
  *
@@ -441,7 +565,21 @@
  *   removePlanet
  *
  */
+function SolarSystem() {
+  this.planets = [];
 
+  SolarSystem.prototype.addPlanet = function (planet) {
+    this.planets.push(planet);
+  }
+
+  SolarSystem.prototype.removePlanet = function (planet) {
+    if (this.planets.includes(planet)) {
+      this.planets.splice(this.planets.indexOf(planet), 1);
+    } else {
+      this.planets.pop();
+    }
+  }
+}
 
 /* Step 33
  *
@@ -475,7 +613,35 @@
  *   marries
  *
  */
+function PrincessLeia(name, money, age, gender) {
+  const obj = new Person(name, money, age, gender);
+  Object.setPrototypeOf(obj, new.target.prototype);
+  obj.isInTrouble = null;
 
+  PrincessLeia.prototype.shootsGun = function () {
+    this.isInTrouble = false;
+    return `Leia shoots her gun wildly`;
+  }
+
+  PrincessLeia.prototype.getsInTrouble = function () {
+    this.isInTrouble = true;
+    return `Help me Obi-wan Kenobi, you're my only hope`;
+  }
+
+  PrincessLeia.prototype.marries = function (lover) {
+    if (lover === `Han Solo`) {
+      return true;
+    } else if (lover === `Luke Skywalker`) {
+      return `Gross!`;
+    } else {
+      return false;
+    }
+  }
+
+  return obj;
+}
+
+PrincessLeia.prototype = Object.create(Person.prototype);
 
 /* Step 34
  *
@@ -494,7 +660,14 @@
  *   staplePapers
  *
  */
+function Stapler(color, maxPapers) {
+  this.color = color;
+  this.maxPapers = maxPapers;
 
+  Stapler.prototype.staplePapers = function (numberOfPapers) {
+    return numberOfPapers <= this.maxPapers;
+  }
+}
 
 /* Step 35
  *
@@ -534,189 +707,34 @@
  *   addDiscovery
  *
  */
+function Scientist(name, money, age, gender) {
+  const obj = new Person(name, money, age, gender);
+  Object.setPrototypeOf(obj, new.target.prototype);
+  obj.disciplines = [];
+  obj.discoveries = [];
 
+  Scientist.prototype.addDiscipline = function (discipline) {
+    this.disciplines.push(discipline);
+  }
 
-/* Step 36
- *
- * Define an ES5 class named "BankAccount" that has properties
- * "balance" and "owner." Add a method "withdraw" that allows
- * the owner to remove money from the account and add it to
- * their Person object, "deposit" that lets a Person spend
- * money to increase their balance, and "rob" that allows
- * any Person object to take money from the bank account.
- *
- * class
- *   BankAccount
- * properties
- *   balance
- *   owner
- * methods
- *   withdraw
- *   deposit
- *   rob
- *
- */
+  Scientist.prototype.checkDiscipline = function (discipline) {
+    return this.disciplines.includes(discipline);
+  }
 
+  Scientist.prototype.addDiscovery = function (discovery) {
+    this.discoveries.push(discovery);
+    if (this.discoveries.length <= 2) {
+      return `I discovered ${this.discoveries.join(` and `)}.`;
+    }
+    let result = `I discovered ${this.discoveries.slice(0, this.discoveries.length - 1).join(`, `)}`;
+    result += `, and ${this.discoveries[this.discoveries.length - 1]}.`;
+    return result;
+  }
 
-/* Step 37
- *
- * WIP
- * PacMan
- *  x
- *  y
- *  north()
- *  south()
- *  east()
- *  west()
- *  getPosition()
- *
- *
- */
+  return obj;
+}
 
-
-/* Step 38
- *
- * WIP
- * beer
- *  temperature 50
- *  volume 12
- *  dispense()
- *  getVolume()
- *
- */
-
-
-/* Step 39
- *
- * WIP
- * cow
- *   poops : 0
- *   milks : 0
- *   eat() poops += quantity / 10
- *   drink() milks += volume *.9
- *
- */
-
-
-/* Step 40
- *
- * WIP
- * cow
- *   poops : 0
- *   milks : 0
- *   eat() poops += quantity / 10
- *   drink() milks += volume *.9
- *
- */
-
-
-/* Step 41
- *
- * WIP
- * cow
- *   poops : 0
- *   milks : 0
- *   eat() poops += quantity / 10
- *   drink() milks += volume *.9
- *
- */
-
-
-/* Step 42
- *
- * WIP
- * cow
- *   poops : 0
- *   milks : 0
- *   eat() poops += quantity / 10
- *   drink() milks += volume *.9
- *
- */
-
-
-/* Step 43
- *
- * WIP
- * cow
- *   poops : 0
- *   milks : 0
- *   eat() poops += quantity / 10
- *   drink() milks += volume *.9
- *
- */
-
-
-/* Step 44
- *
- * WIP
- * cow
- *   poops : 0
- *   milks : 0
- *   eat() poops += quantity / 10
- *   drink() milks += volume *.9
- *
- */
-
-
-/* Step 45
- *
- * WIP
- * cow
- *   poops : 0
- *   milks : 0
- *   eat() poops += quantity / 10
- *   drink() milks += volume *.9
- *
- */
-
-
-/* Step 46
- *
- * WIP
- * cow
- *   poops : 0
- *   milks : 0
- *   eat() poops += quantity / 10
- *   drink() milks += volume *.9
- *
- */
-
-
-/* Step 47
- *
- * WIP
- * cow
- *   poops : 0
- *   milks : 0
- *   eat() poops += quantity / 10
- *   drink() milks += volume *.9
- *
- */
-
-
-/* Step 48
- *
- * WIP
- * cow
- *   poops : 0
- *   milks : 0
- *   eat() poops += quantity / 10
- *   drink() milks += volume *.9
- *
- */
-
-
-/* Step 49
- *
- * WIP
- * cow
- *   poops : 0
- *   milks : 0
- *   eat() poops += quantity / 10
- *   drink() milks += volume *.9
- *
- */
-
+Scientist.prototype = Object.create(Person.prototype);
 
 /**
  * Define a Classes
@@ -729,7 +747,12 @@
  * @param {string} species The animal species
  * @param {string} gender  male or female
  */
-
+class Animal {
+  constructor(species, gender) {
+    this.species = species;
+    this.gender = gender;
+  }
+}
 
 /**
  * Step 51
@@ -738,7 +761,12 @@
  * @param {string} make The vehicle's make
  * @param {string} model The vehicle's model
  */
-
+class Vehicle {
+  constructor(make, model) {
+    this.make = make;
+    this.model = model;
+  }
+}
 
 /**
  * Step 52
@@ -749,7 +777,11 @@
  * value of the sides property to null.
  *
  */
-
+class Shape {
+  constructor(sides) {
+    this.sides = sides >= 3 ? sides : null;
+  }
+}
 
 /**
  * Step 53
@@ -758,7 +790,12 @@
  * @param {anything} contents The contents of the box
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
-
+class Box {
+  constructor(contents, isOpen) {
+    this.contents = contents;
+    this.isOpen = isOpen;
+  }
+}
 
 /**
  * Step 54
@@ -766,7 +803,11 @@
  * Door class
  * @param {boolean} isOpen Whether the door is opened or closed
  */
-
+class Door {
+  constructor(isOpen) {
+    this.isOpen = isOpen;
+  }
+}
 
 /**
  * Step 55
@@ -775,7 +816,12 @@
  * @param {number} size  The shoe size
  * @param {string} color The shoe color
  */
-
+class Shoe {
+  constructor(size, color) {
+    this.size = size;
+    this.color = color;
+  }
+}
 
 /**
  * Step 56
@@ -783,7 +829,11 @@
  * House class
  * @param {number} stories How many stories tall the house is
  */
-
+class House {
+  constructor(stories) {
+    this.stories = stories;
+  }
+}
 
 /**
  * Step 57
@@ -791,7 +841,11 @@
  * Lightbulb class
  * @param {boolean} isOn Whether the light is on or off
  */
-
+class Lightbulb {
+  constructor(isOn) {
+    this.isOn = isOn;
+  }
+}
 
 /**
  * Step 58
@@ -799,7 +853,11 @@
  * Cookie class
  * @param {string} flavor The cookie's flavor
  */
-
+class Cookie {
+  constructor(flavor) {
+    this.flavor = flavor;
+  }
+}
 
 /**
  * Step 59
@@ -807,7 +865,11 @@
  * Meal class
  * @param {Array} foods All the foods in the meal
  */
-
+class Meal {
+  constructor(foods) {
+    this.foods = foods;
+  }
+}
 
 /**
  * Create a new instance of the Classes you defined above, below!
@@ -816,52 +878,50 @@
 
 
 // Create 2 different species of animals
-var george;
-var nemo;
+var george = new Animal(`Monkey`, `male`);
+var nemo = new Animal(`Fish`, `male`);
 
 // Create 2 different vehicles
-var civic;
-var forte;
+var civic = new Vehicle(`Honda`, `Civic`);
+var forte = new Vehicle(`KIA`, `Forte`);
 
 // Create 2 shapes with different numbers of sides
-var square;
-var hexagon;
+var square = new Shape(4);
+var hexagon = new Shape(6);
 
 // Create 2 boxes
-var catBox;
-var christmasPresent;
+var catBox = new Box(new Animal(`Cat`, `female`), true);
+var christmasPresent = new Box(`money`, false);
 
 // Create 2 doors
-var automaticDoor;
-var bankVault;
+var automaticDoor = new Door(true);
+var bankVault = new Door(false);
 
 // Create 2 shoes
-var rubySlippers;
-var dressShoes;
+var rubySlippers = new Shoe(7, `red`);
+var dressShoes = new Shoe(10, `black`);
 
 // Create 2 houses
-var singleStory;
-var twoStory;
+var singleStory = new House(1);
+var twoStory = new House(2);
 
 // Create 2 lightbulbs
-var incandescent;
-var halogen;
+var incandescent = new Lightbulb(true);
+var halogen = new Lightbulb(false);
 
 // Create 2 cookies of different flavors
-var chocolateChip;
-var gingerbread;
+var chocolateChip = new Cookie(`chocolate`);
+var gingerbread = new Cookie(`gingerbread`);
 
 // Create 2 different meals
-var breakfast;
-var dinner;
+var breakfast = new Meal([`cereal`, `milk`]);
+var dinner = new Meal([`fish`, `vegetables`]);
 
-
- /* Steps 81 to 90
- *
- * Create methods
- *
- */
-
+/* Steps 81 to 90
+*
+* Create methods
+*
+*/
 
 /* Step 81
  *
@@ -877,7 +937,22 @@ var dinner;
  *       Any other species => "Could not determine if warm-blooded"
  *
  */
-
+Animal.prototype.isWarmBlooded = function () {
+  switch (this.species) {
+    case `Fish`:
+      return false;
+      break;
+    case `Monkey`:
+      return true;
+      break;
+    case `Bird`:
+      return true;
+      break;
+    default:
+      return `Could not determine if warm-blooded`;
+      break;
+  }
+}
 
 /* Step 82
  *
@@ -886,26 +961,52 @@ var dinner;
  * return "Driving on {streetName}", else return "Driving forward".
  *
  */
+Vehicle.prototype.drive = function (streetName) {
+  if (streetName && typeof streetName === 'string') {
+    return `Driving on ${streetName}`;
+  }
+  return `Driving forward`;
+}
 
-
- /* Step 83
- *
- * Declare a Shape method called getType that returns a string
- * containing the type of shape based on the sides property.
- *
- *       this.sides =>
- *                3 => "triangle"
- *                4 => "quadrilateral"
- *                5 => "pentagon"
- *                6 => "hexagon"
- *                7 => "heptagon"
- *                8 => "octagon"
- *                9 => "nonagon"
- *               10 => "decagon"
- * Any other number => "Could not determine type"
- *
- */
-
+/* Step 83
+*
+* Declare a Shape method called getType that returns a string
+* containing the type of shape based on the sides property.
+*
+*       this.sides =>
+*                3 => "triangle"
+*                4 => "quadrilateral"
+*                5 => "pentagon"
+*                6 => "hexagon"
+*                7 => "heptagon"
+*                8 => "octagon"
+*                9 => "nonagon"
+*               10 => "decagon"
+* Any other number => "Could not determine type"
+*
+*/
+Shape.prototype.getType = function () {
+  switch (this.sides) {
+    case 3:
+      return `triangle`;
+    case 4:
+      return `quadrilateral`;
+    case 5:
+      return `pentagon`;
+    case 6:
+      return `hexagon`;
+    case 7:
+      return `heptagon`;
+    case 8:
+      return `octagon`;
+    case 9:
+      return `nonagon`;
+    case 10:
+      return `decagon`;
+    default:
+      return `Could not determine type`;
+  }
+}
 
 /* Step 84
  *
@@ -915,16 +1016,30 @@ var dinner;
  * Return true if openBox opens the box, false otherwise.
  *
  */
+Box.prototype.openBox = function () {
+  if (!this.isOpen) {
+    this.isOpen = true;
+    return true;
+  }
+  return false;
+}
 
-
- /* Step 85
- *
- * Declare a Door method called openClose that opens the door
- * if it is already closed, or closes the door if it is already open.
- * Return true if openClose opens the door, false if openClose closes the door.
- *
- */
-
+/* Step 85
+*
+* Declare a Door method called openClose that opens the door
+* if it is already closed, or closes the door if it is already open.
+* Return true if openClose opens the door, false if openClose closes the door.
+*
+*/
+Door.prototype.openClose = function () {
+  if (this.isOpen) {
+    this.isOpen = false;
+    return false;
+  } else {
+    this.isOpen = true;
+    return true;
+  }
+}
 
 /* Step 86
  *
@@ -932,58 +1047,76 @@ var dinner;
  * the color and size of the shoe ("Found red shoes of size 7").
  *
  */
+Shoe.prototype.findShoes = function () {
+  return `Found ${this.color} shoes of size ${this.size}`;
+}
 
+/* Step 87
+*
+* Declare a House method called isATallStory that accepts a
+* param number called storiesTooTall.
+* If the house's stories property is greater than or equal to
+* storiesTooTall, return true, else return false.
+*
+*/
+House.prototype.isATallStory = function (storiesTooTall) {
+  return this.stories >= storiesTooTall;
+}
 
- /* Step 87
- *
- * Declare a House method called isATallStory that accepts a
- * param number called storiesTooTall.
- * If the house's stories property is greater than or equal to
- * storiesTooTall, return true, else return false.
- *
- */
+/* Step 88
+*
+* Declare a Lightbulb method called flipSwitch that accepts a
+* param string called on.  If on is the string "on", set
+* the isOn property to true.  If on is any other string,
+* set isOn to false.
+* Return true if isOn is true, false otherwise.
+*
+*/
+Lightbulb.prototype.flipSwitch = function (on) {
+  if (on === `on`) {
+    this.isOn = true;
+  } else {
+    this.isOn = false;
+  }
+  return this.isOn;
+}
 
+/* Step 89
+*
+* Declare a Cookie method called swipedByCookieMonster that accepts
+* a param called dayOfTheWeek.  If the cookie's flavor is "chocolate"
+* and the dayOfTheWeek is "Monday", return true.  Else return false.
+*
+*/
+Cookie.prototype.swipedByCookieMonster = function (dayOfTheWeek) {
+  return this.flavor === `chocolate` && dayOfTheWeek === `Monday`;
+}
 
- /* Step 88
- *
- * Declare a Lightbulb method called flipSwitch that accepts a
- * param string called on.  If on is the string "on", set
- * the isOn property to true.  If on is any other string,
- * set isOn to false.
- * Return true if isOn is true, false otherwise.
- *
- */
+/* Step 90
+*
+* Declare a Meal method called containsJunkFood that returns true if
+* at least one of the items in the foods array is junk food, false otherwise.
+* To check if the food item is junk food, create an array called
+* junkFood containing the following strings: "chips", "soda", "ice cream",
+* "popcorn", and "candy".
+*
+* Use Array's indexOf method to check if the foods array contains junk food.
+* Note that if an element is not found in the array, indexOf returns -1.
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+*
+*/
+Meal.prototype.containsJunkFood = function () {
+  let junkFood = [`chips`, `soda`, `ice cream`, `popcorn`, `candy`];
+  return this.foods.some((curr) => {
+    return junkFood.indexOf(curr) > -1;
+  });
+}
 
-
- /* Step 89
- *
- * Declare a Cookie method called swipedByCookieMonster that accepts
- * a param called dayOfTheWeek.  If the cookie's flavor is "chocolate"
- * and the dayOfTheWeek is "Monday", return true.  Else return false.
- *
- */
-
-
- /* Step 90
- *
- * Declare a Meal method called containsJunkFood that returns true if
- * at least one of the items in the foods array is junk food, false otherwise.
- * To check if the food item is junk food, create an array called
- * junkFood containing the following strings: "chips", "soda", "ice cream",
- * "popcorn", and "candy".
- *
- * Use Array's indexOf method to check if the foods array contains junk food.
- * Note that if an element is not found in the array, indexOf returns -1.
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
- *
- */
-
-
- /* Steps 91 to 100
- *
- * Call methods
- *
- */
+/* Steps 91 to 100
+*
+* Call methods
+*
+*/
 
 
 /* Step 91
@@ -992,9 +1125,9 @@ var dinner;
  * and assign the values to each variable below.
  *
  */
-var warmBloodedAnimal;
-var coldBloodedAnimal;
-var notWarmOrColdAnimal;
+var warmBloodedAnimal = george.isWarmBlooded();
+var coldBloodedAnimal = nemo.isWarmBlooded();
+var notWarmOrColdAnimal = new Animal(`Godzilla`, `Dinosaur`).isWarmBlooded();
 
 
 /* Step 92
@@ -1003,18 +1136,18 @@ var notWarmOrColdAnimal;
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+var streetDriving = civic.drive(`Kapiolani Street`);
+var forwardDriving = forte.drive();
 
 
- /* Step 93
- *
- * Call the getType method on two Shape instances
- * and assign the values to each variable below.
- *
- */
-var decagon;
-var polygon;
+/* Step 93
+*
+* Call the getType method on two Shape instances
+* and assign the values to each variable below.
+*
+*/
+var decagon = new Shape(10).getType();
+var polygon = new Shape(27).getType();
 
 
 /* Step 94
@@ -1023,18 +1156,18 @@ var polygon;
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox;
-var closeAnOpenBox;
+var openAClosedBox = new Box(`food`, false).openBox();
+var closeAnOpenBox = catBox.openBox();
 
 
- /* Step 95
- *
- * Call the openClose method on two Door instances
- * and assign the values to each variable below.
- *
- */
-var openAClosedDoor;
-var closeAnOpenDoor;
+/* Step 95
+*
+* Call the openClose method on two Door instances
+* and assign the values to each variable below.
+*
+*/
+var openAClosedDoor = new Door(false).openClose();
+var closeAnOpenDoor = new Door(true).openClose();
 
 
 /* Step 96
@@ -1043,45 +1176,45 @@ var closeAnOpenDoor;
  * and assign the values to each variable below.
  *
  */
-var redShoesSize7;
-var blackShoesSize10;
+var redShoesSize7 = rubySlippers.findShoes();
+var blackShoesSize10 = dressShoes.findShoes();
 
 
- /* Step 97
- *
- * Call the isATallStory method on two House instances
- * and assign the values to each variable below.
- *
- */
-var farTooTallAStory;
-var shortStory;
+/* Step 97
+*
+* Call the isATallStory method on two House instances
+* and assign the values to each variable below.
+*
+*/
+var farTooTallAStory = twoStory.isATallStory(2);
+var shortStory = twoStory.isATallStory(10);
 
 
- /* Step 98
- *
- * Call the switch method on two Lightbulb instances
- * and assign the values to each variable below.
- *
- */
-var kitchenLightsOn;
-var porchLightsOff;
+/* Step 98
+*
+* Call the switch method on two Lightbulb instances
+* and assign the values to each variable below.
+*
+*/
+var kitchenLightsOn = new Lightbulb(false).flipSwitch(`on`);
+var porchLightsOff = new Lightbulb(true).flipSwitch(`nooooooope`);
 
 
- /* Step 99
- *
- * Call the swipedByCookieMonster method on two Cookie instances
- * and assign the values to each variable below.
- *
- */
-var cookieMonsterPwns;
-var cookieMonsterBlocked;
+/* Step 99
+*
+* Call the swipedByCookieMonster method on two Cookie instances
+* and assign the values to each variable below.
+*
+*/
+var cookieMonsterPwns = chocolateChip.swipedByCookieMonster(`Monday`);
+var cookieMonsterBlocked = chocolateChip.swipedByCookieMonster(`Friday`);
 
 
- /* Step 100
- *
- * Call the containsJunkFood method on two Meal instances
- * and assign the values to each variable below.
- *
- */
-var badForYou;
-var goodForYou;
+/* Step 100
+*
+* Call the containsJunkFood method on two Meal instances
+* and assign the values to each variable below.
+*
+*/
+var badForYou = new Meal([`vegetables`, `avocado`, `candy`]).containsJunkFood();
+var goodForYou = dinner.containsJunkFood();
